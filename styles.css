@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 86%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.7rem 0.7rem 3rem 0.7rem;
+  position: relative;
+  min-width: 670px;
+  max-width: 720px;
+  margin: 0 1rem;
+}
+
+.inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.inputs div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  color: hsl(0, 1%, 44%);
+}
+
+input {
+  padding: 0.3rem 0.5rem;
+  width: 115px;
+  border: 1px solid hsl(0, 0%, 94%);
+  border-radius: 0.3rem;
+  font-weight: 400;
+}
+
+.error {
+  font-size: small;
+  font-weight: lighter;
+  color: hsl(0, 100%, 67%);
+  opacity: 0;
+  font-style: italic;
+}
+
+img {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 5%;
+  top: 31%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+hr {
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.outputs {
+  line-height: 2.5rem;
+}
+
+.outputs span,
+.outputs p {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 70px;
+}
+
+.outputs span {
+  color: hsl(259, 100%, 65%);
+
+  letter-spacing: 0.3rem;
+}
+
+.outputs p {
+  color: hsl(0, 0%, 8%);
+}
+
+.animate {
+  animation: visib 1s linear 30ms 1 forwards;
+  opacity: 0;
+}
+
+@keyframes visib {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 16px;
+  }
+  .body {
+    height: auto;
+  }
+  .container {
+    min-width: 370px;
+  }
+
+  input {
+    padding: 0.3rem 0.5rem;
+    width: 75px;
+    border: 1px solid hsl(0, 0%, 94%);
+    border-radius: 0.3rem;
+    font-weight: 400;
+  }
+
+  .error {
+    font-size: 7px;
+  }
+
+  hr {
+    margin: 2rem 0;
+  }
+
+  img {
+    right: 45%;
+    top: 29%;
+  }
+
+  .outputs span,
+  .outputs p {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 50px;
+  }
+
+  .outputs {
+    line-height: 3.5rem;
+    padding: 1rem 0;
+  }
+}
